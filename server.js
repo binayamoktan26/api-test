@@ -41,14 +41,14 @@ app.post("/", (req, res) => {
   });
 });
 app.put("/", (req, res) => {
-  console.log(req.body, "from put");
+  console.log(req.body, req.headers.authorization, "from put");
 
   res.json({
     message: "todo put method world",
   });
 });
-app.delete("/", (req, res) => {
-  console.log(req.body, "from delete");
+app.delete("/:id", (req, res) => {
+  console.log(req.params, "from delete");
   res.json({
     message: " todo delete method",
   });

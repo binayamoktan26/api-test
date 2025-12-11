@@ -1,0 +1,30 @@
+### Get request
+GET http://localhost:8000
+
+
+### Post user request 
+POST http://localhost:8000
+Content-Type: application/json
+Authorization: 205826
+
+{
+ "id": "7",
+ "fname": "Naruto",
+  "lname": "Uzumaki"
+}
+### UPDATE  user request
+PUT http://localhost:8000
+Content-Type: application/json
+Authorization: 205826
+
+{
+  "id": "2",
+  "fname": "Sasuke",
+  "lname": "Uchiha"
+}
+
+### Delete user request
+DELETE  http://localhost:8000/20202
+
+
+
