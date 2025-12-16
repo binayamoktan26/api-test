@@ -1,9 +1,11 @@
 ### Get request
-GET http://localhost:8000
+
+@urlEP=http://localhost:8000/api/v1/users
+GET {{urlEP}}?id=10&name=shikamaru
 
 
 ### Post user request 
-POST http://localhost:8000
+POST {{urlEP}}
 Content-Type: application/json
 Authorization: 205826
 
@@ -13,7 +15,7 @@ Authorization: 205826
   "lname": "Uzumaki"
 }
 ### UPDATE  user request
-PUT http://localhost:8000
+PUT {{urlEP}}
 Content-Type: application/json
 Authorization: 205826
 
@@ -24,7 +26,6 @@ Authorization: 205826
 }
 
 ### Delete user request
-DELETE  http://localhost:8000/20202
+DELETE  {{urlEP}}/20202
 
-
-
+# curl -X POST "http://localhost:8000" -H "Content-Type: application/json" -d '{"id": "9","fname":"Obito","lname": "Uchiha"}' 
